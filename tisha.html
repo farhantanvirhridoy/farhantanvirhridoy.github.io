@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Heath's Personal Website">
+    <meta name="keywords" content="heath, blandford, heath blandford">
+    <meta name="author" content="heath blandford">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--import bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- import google fonts lobster and open sans -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>LOVE</title>
+
+    <script>
+        function myfunc(){
+            var text = ""
+            var choice = document.getElementsByName("inlineRadioOptions")
+            if(choice[0].checked) text = "Love you too"
+            else text = "Tarporeo love you so much"
+            var tag = document.getElementById("blank")
+            tag.innerHTML = text
+        }
+    </script>
+
+
+</head>
+
+
+
+<body>
+    <div class="container border">
+
+        Do You Love Me SonaBou? </br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">YES</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">NO</label>
+        </div> </br>
+        <button type="submit" class="btn btn-primary" onclick="myfunc()">Submit</button>
+        <p id="blank"></p>
+
+    </div>
+</body>
