@@ -1,22 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>React App</title>
-    <script defer="defer" src="/static/js/main.0bd262c9.js"></script>
-    <link href="/static/css/main.9ba95009.css" rel="stylesheet" />
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+
+    <title>Portfolio | Farhan</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- --------------- HEADER --------------- -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Farhan Tanvir</p>
+
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link" onclick="myMenuFunction()">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link" onclick="myMenuFunction()">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#skills" class="nav-link" onclick="myMenuFunction()">Skills</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link" onclick="myMenuFunction()">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+
+
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link" onclick="myMenuFunction()">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-button">
+
+                <button class="btn"
+                    onclick="window.location.href='https://drive.google.com/uc?export=download&id=1n3m6YRMxRJ_RQ3Dic00D5141AmftglFd';">Download
+                    CV <i class="uil uil-file-alt"></i>
+                </button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+
+        <!-- -------------- MAIN ---------------- -->
+        <main class="wrapper">
+            <!-- -------------- FEATURED BOX ---------------- -->
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="featured-text-card">
+                        <span>Farhan Tanvir</span>
+                    </div>
+                    <div class="featured-name">
+                        <p>I'm <span class="typedText"></span></p>
+                    </div>
+                    <div class="featured-text-info">
+                        <p>Experienced python developer for Web App
+
+                        </p>
+                    </div>
+                    <div class="featured-text-btn">
+                        <button class="btn blue-btn">Hire Me</button>
+                        <button class="btn"
+                            onclick="window.location.href='https://drive.google.com/uc?export=download&id=1n3m6YRMxRJ_RQ3Dic00D5141AmftglFd';">Download
+                            CV <i class="uil uil-file-alt"></i></button>
+                    </div>
+                    <div class="social_icons">
+                        <div class="icon" onclick="window.location.href='https://www.facebook.com/farhantanvirhridoy';">
+                            <i class="uil uil-facebook"></i>
+                        </div>
+                        <div class="icon"
+                            onclick="window.location.href='https://www.linkedin.com/in/farhantanvir362/';"><i
+                                class="uil uil-linkedin-alt"></i></div>
+                        <a href="mailto:tanvirridoy864@gmail.com">
+                            <div class="icon"><i class="uil uil-envelope"></i></div>
+                        </a>
+                        <div class="icon" onclick="window.location.href='tel:+8801984811676';"><i
+                                class="uil uil-phone"></i></div>
+                        <div class="icon"
+                            onclick="window.location.href='https://www.youtube.com/@farhantanvir.buet17';"><i
+                                class="uil uil-youtube"></i></div>
+                        <div class="icon" onclick="window.location.href='https://github.com/farhantanvirhridoy/';"><i
+                                class="uil uil-github-alt"></i></div>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="assets/images/avatar.jpg" alt="avatar">
+                    </div>
+                </div>
+                <div class="scroll-icon-box">
+                    <a href="#about" class="scroll-btn">
+                        <i class="uil uil-mouse-alt"></i>
+                        <p>Scroll Down</p>
+                    </a>
+                </div>
+
+            </section>
+            <!-- -------------- ABOUT BOX ---------------- -->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About Me</h1>
+                </div>
+                <div class="row">
+
+                    <div class="about-info">
+                        <h3>My introduction</h3>
+                        <p>
+                            I am a passionate and versatile Mechanical Engineering graduate at
+                            BUET, with a strong foundation in programming, CAD modeling, and simulation tools. I
+                            combine my technical expertise with hands-on experience in automation, web development,
+                            and microcontroller-based projects. I have a keen interest in fields like heat transfer,
+                            fluid mechanics, and computational fluid dynamics, and I actively apply my knowledge
+                            through innovative projects and research. With a drive for learning and a talent for
+                            problem-solving, I continue to explore the intersection of engineering and technology.
+                        </p>
+                        <div class="about-btn">
+                            <button class="btn"
+                                onclick="window.location.href='https://drive.google.com/uc?export=download&id=1n3m6YRMxRJ_RQ3Dic00D5141AmftglFd';">Download
+                                CV <i class="uil uil-import"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- -------------- SKILL BOX ---------------- -->
+            <section class="section" id="skills">
+                <div class="top-header">
+                    <h1>Skills</h1>
+                </div>
+                <div class="row">
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>Programming Language</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span>Python</span>
+                            <span>MATLAB</span>
+                            <span>C</span>
+                            <span>Visual Basic for Excel</span>
+
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>Microcontroler</h3>
+                        </div>
+                        <div class="skills-list">
+
+                            <span>Arduino</span>
+                            <span>Raspberry Pi</span>
+
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>Circuit Modeling</h3>
+                        </div>
+                        <div class="skills-list">
+
+                            <span>Proteus</span>
+                            <span>TinkerCAD</span>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>CAD Modeling</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span>SolidWorks</span>
+                            <span>AutoCAD</span>
+                            <span>SolidWorks Simulation</span>
+                            <span>SolidWorks Flow Simulation</span>
+                            <span>SolidWorks Motion Study</span>
+                            <span>SolidWorks Design Study</span>
+                            <span>Ansys Mechanical</span>
+                            <span>Ansys Fluent</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>Web Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span>HTML5</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Django Framework</span>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>Microsoft Office and Others</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span>Word</span>
+                            <span>Excel</span>
+                            <span>PowerPoint</span>
+                            <span>Google Workspace</span>
+                            <span>Tecplot 360</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- -------------- PROJECT BOX ---------------- -->
+
+
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <h3>Smart Home</h3>
+                            <p style="text-align: justify;"> Build a project using arduino for home automation. Here we
+                                control the door system by
+                                measuring
+                                body temperature of incoming person, control fan and air cooler by measuring temperature
+                                and humidity, control
+                                water pump by measuring water level of water tank. There are also some security systems.
+                                If there occurs fire or gas
+                                leakage inside the home, an alarm is ringing and a notification is sent to owner of home
+                                via mobile network. We also
+                                develop an android app to control all of our home elements manually by Bluetooth
+                                communication.
+                            </p>
+                            <div class="about-btn">
+                                <button class="btn">Link</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="about-info">
+                            <h3 style="text-align: justify;">Shell and tube heat exchanger for marine application</h3>
+                            <p style="text-align: justify;">Design a shell and tube heat exchanger and model
+                                this. It can be used for marine engine cooling by sea water. Capacity, Size and
+                                efficiency is optimized by HTRI.
+                                Insulation is calculated by 3E Plus
+
+                            </p>
+                            <div class="about-btn">
+                                <button class="btn">Link</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </br>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <h3>Result System</h3>
+                            <p>Build a project that can be used for grade sheet maker in school and college level
+                                institution in
+                                Bangladesh. Python is used here. Individual marksheet and full result sheet is created
+                                after run the project.
+                            </p>
+                            <div class="about-btn">
+                                <button class="btn">Link</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="about-info">
+                            <h3>Online Quiz App</h3>
+                            <p>Build a project using django framework, HTML5, CSS and JavaScript. Here student can
+                                register
+                                and participate MCQ exam. They can see their previous result also
+                            </p>
+                            <div class="about-btn">
+                                <button class="btn">Link</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </br>
+                <div class="row">
+                    <div class="col">
+
+                        <div class="about-info">
+                            <h3> Cuttly URL Shortener</h3>
+                            <p> This is simple program of url shortener using cuttly api and sqlite
+                            </p>
+                            <div class="about-btn">
+                                <button class="btn">Link</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+
+
+                    </div>
+                </div>
+            </section>
+            <!-- -------------- ACHIEVEMENTS BOX ---------------- -->
+            <section class="section" id="achievements">
+                <div class="top-header">
+                    <h1>Achievements</h1>
+                </div>
+                <div class="project-container">
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Completed</h3>
+                        <label>15+ Finished Projects</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-users-alt"></i>
+                        <h3>Team</h3>
+                        <label>5+ Team Works </label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-award"></i>
+                        <h3>Experience</h3>
+                        <label>7+ Years in the field</label>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- -------------- CONTACT BOX ---------------- -->
+
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Get in touch</h1>
+                    <span>Do you have a project in your mind, contact me here</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info">
+                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i> Email: tanvirridoy864@gmail.com</p>
+                            <p><i class="uil uil-phone"></i> Mobile: +8801984-811676</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-control">
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" placeholder="Name">
+                                <input type="text" class="input-field" placeholder="Email">
+                            </div>
+                            <div class="text-area">
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- --------------- FOOTER --------------- -->
+        <footer>
+            <div class="top-footer">
+                <p>Farhan Tanvir</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    
+                    <li class="footer_menu_list">
+                        <a href="#home">Home</a>
+                        
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#about">About</a>
+                        
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#skills">Skills</a>
+                        
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#projects">Projects</a>
+                        
+                    </li>
+
+
+                    
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+
+                <div class="icon" onclick="window.location.href='https://www.facebook.com/farhantanvirhridoy';"><i
+                        class="uil uil-facebook"></i></div>
+                <div class="icon" onclick="window.location.href='https://www.linkedin.com/in/farhantanvir362/';"><i
+                        class="uil uil-linkedin-alt"></i></div>
+                <a href="mailto:tanvirridoy864@gmail.com">
+                    <div class="icon"><i class="uil uil-envelope"></i></div>
+                </a>
+                <div class="icon" onclick="window.location.href='tel:+8801984811676';"><i class="uil uil-phone"></i>
+                </div>
+                <div class="icon" onclick="window.location.href='https://www.youtube.com/@farhantanvir.buet17';"><i
+                        class="uil uil-youtube"></i></div>
+                <div class="icon" onclick="window.location.href='https://github.com/farhantanvirhridoy/';"><i
+                        class="uil uil-github-alt"></i></div>
+
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Farhan Tanvir</a> - All rights
+                    reserved
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
