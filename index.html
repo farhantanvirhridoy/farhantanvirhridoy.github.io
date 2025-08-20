@@ -1,689 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- --------- UNICONS ---------- -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-
-    <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://unpkg.com/bs-brain@2.0.4/tutorials/timelines/timeline-7/assets/css/timeline-7.css">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- --------- FAVICON ---------- -->
-    <!-- <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon"> -->
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/site.webmanifest">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Farhan</title>
-</head>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Portfolio" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-<body>
-    <div class="mycontainer">
-        <!-- --------------- HEADER --------------- -->
-        <nav id="header">
-            <div class="nav-logo">
-                <p class="nav-name">Farhan Tanvir</p>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
 
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#home" class="logo">
+          <i class="fas fa-code"></i>
+          Portfolio
+        </a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <div class="theme-toggle" id="theme-toggle">
+              <div class="theme-icon" id="theme-icon">
+                <i class="fas fa-sun" id="theme-symbol"></i>
+              </div>
             </div>
-            <div class="nav-menu" id="myNavMenu">
-                <ul class="nav_menu_list">
-                    <li class="nav_list">
-                        <a href="#home" class="nav-link active-link" onclick="myMenuFunction()">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#about" class="nav-link" onclick="myMenuFunction()">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#skills" class="nav-link" onclick="myMenuFunction()">Skills</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#projects" class="nav-link" onclick="myMenuFunction()">Projects</a>
-                        <div class="circle"></div>
-                    </li>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-
-                    <li class="nav_list">
-                        <a href="#contact" class="nav-link" onclick="myMenuFunction()">Contact</a>
-                        <div class="circle"></div>
-                    </li>
-                </ul>
+    <!-- Home Section -->
+    <section id="home" class="home visible">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="container">
+        <div class="home-content">
+          <div class="home-text">
+            <h1>Hello, I'm Farhan Tanvir</h1>
+            <div class="typing-container">
+              <h2 id="typing-text">I am an engineer</h2>
+              <span class="typing-cursor"></span>
             </div>
-            
-            <div class="nav-menu-btn">
-                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            <p>
+              Experienced Python Developer for Web Applications, Data Analysis,
+              and Machine Learning.
+            </p>
+            <a href="#contact" class="btn">Get In Touch</a>
+          </div>
+          <div class="home-image">
+            <img src="assets/images/pic_enhanced.jpg" alt="Profile Picture" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="assets/images/IMG-20250619-WA0045.jpg" alt="About Me" />
+          </div>
+          <div class="about-text">
+            <h3>My introduction</h3>
+            <p>
+              I am a passionate and versatile Mechanical Engineering graduate at
+              BUET, with a strong foundation in programming, CAD modeling, and
+              simulation tools. I combine my technical expertise with hands-on
+              experience in automation, web development, and
+              microcontroller-based projects. I have a keen interest in fields
+              like heat transfer, fluid mechanics, and computational fluid
+              dynamics, and I actively apply my knowledge through innovative
+              projects and research. With a drive for learning and a talent for
+              problem-solving, I continue to explore the intersection of
+              engineering and technology.
+            </p>
+
+            <div class="info-item">
+              <span>Name:</span>
+              <span>Farhan Tanvir</span>
             </div>
-
-        </nav>
-
-
-        <!-- -------------- MAIN ---------------- -->
-        <main class="wrapper">
-            <!-- -------------- FEATURED BOX ---------------- -->
-            <section class="featured-box" id="home">
-                <div class="featured-text">
-                    <div class="featured-text-card">
-                        <span>Farhan Tanvir</span>
-                    </div>
-                    <div class="featured-name">
-                        <p>I'm <span class="typedText"></span></p>
-                    </div>
-                    <div class="featured-text-info">
-                        <p>Experienced python developer for Web App
-
-                        </p>
-                    </div>
-                    <div class="featured-text-btn">
-                        <button class="btn blue-btn">Hire Me</button>
-                        <button class="btn"
-                            onclick="window.location.href='https://www.googleapis.com/drive/v3/files/1n3m6YRMxRJ_RQ3Dic00D5141AmftglFd?alt=media&key=AIzaSyAA9ERw-9LZVEohRYtCWka_TQc6oXmvcVU&supportsAllDrives=True';">Download
-                            CV <i class="uil uil-file-alt"></i></button>
-                    </div>
-                    <div class="social_icons">
-                        <div class="icon" onclick="window.location.href='https://www.facebook.com/farhantanvirhridoy';">
-                            <i class="uil uil-facebook"></i>
-                        </div>
-                        <div class="icon"
-                            onclick="window.location.href='https://www.linkedin.com/in/farhantanvir362/';"><i
-                                class="uil uil-linkedin-alt"></i></div>
-                        <a href="mailto:tanvirridoy864@gmail.com">
-                            <div class="icon"><i class="uil uil-envelope"></i></div>
-                        </a>
-                        <div class="icon" onclick="window.location.href='tel:+8801984811676';"><i
-                                class="uil uil-phone"></i></div>
-                        <div class="icon"
-                            onclick="window.location.href='https://www.youtube.com/@farhantanvir.buet17';"><i
-                                class="uil uil-youtube"></i></div>
-                        <div class="icon" onclick="window.location.href='https://github.com/farhantanvirhridoy/';"><i
-                                class="uil uil-github-alt"></i></div>
-                    </div>
-                </div>
-                <div class="featured-image">
-                    <div class="image">
-                        <img src="assets/images/avatar.jpg" alt="avatar">
-                    </div>
-                </div>
-                <div class="scroll-icon-box">
-                    <a href="#about" class="scroll-btn">
-                        <i class="uil uil-mouse-alt"></i>
-                        <p>Scroll Down</p>
-                    </a>
-                </div>
-
-            </section>
-            <!-- -------------- ABOUT BOX ---------------- -->
-            <section class="section" id="about">
-                <div class="top-header">
-                    <h1>About Me</h1>
-                </div>
-                <div class="row">
-
-                    <div class="about-info">
-                        <h3>My introduction</h3>
-                        <p>
-                            I am a passionate and versatile Mechanical Engineering graduate at
-                            BUET, with a strong foundation in programming, CAD modeling, and simulation tools. I
-                            combine my technical expertise with hands-on experience in automation, web development,
-                            and microcontroller-based projects. I have a keen interest in fields like heat transfer,
-                            fluid mechanics, and computational fluid dynamics, and I actively apply my knowledge
-                            through innovative projects and research. With a drive for learning and a talent for
-                            problem-solving, I continue to explore the intersection of engineering and technology.
-                        </p>
-                        <div class="about-btn">
-                            <button class="btn"
-                                onclick="window.location.href='https://drive.usercontent.google.com/download?id=1n3m6YRMxRJ_RQ3Dic00D5141AmftglFd&export=download&authuser=0';">Download
-                                CV <i class="uil uil-import"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- -------------- Experience BOX ---------------- -->
-            <section class="section" id="experience">
-                <div class="top-header">
-                    <h1>Experience</h1>
-                </div>
-                <!-- Timeline 7 - Bootstrap Brain Component -->
-
-                <section class="bsb-timeline-7 py-3 py-md-5 py-xl-8">
-                    <div class="container">
-
-                        <div class="row justify-content-center">
-
-                            <div class="col-10 col-md-12 col-xl-10 col-xxl-9">
-
-                                <ul class="timeline">
-                                    <li class="timeline-item">
-                                        <div class="timeline-body">
-                                            <div class="timeline-meta">
-                                                <div
-                                                    class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
-                                                    <span class="fw-bold">2024 - Present</span>
-                                                    <span>BGDCL</span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">Assistant Engineer</h2>
-
-                                                        <p class="card-text m-0">I am employed as an Assistant Engineer
-                                                            at Bakhrabad Gas Distribution Company Limited (BGDCL).</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-item">
-                                        <div class="timeline-body">
-                                            <div class="timeline-meta">
-                                                <div
-                                                    class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
-                                                    <span class="fw-bold">2025</span>
-                                                    <span>BARD</span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">Institutional Foundation Training
-                                                            Course</h2>
-
-                                                        <p class="card-text m-0">The Training
-                                                            Course was organized by the Bangladesh Academy for Rural
-                                                            Development (BARD) and sponsored by BGDCL. The training was
-                                                            held from 12 to 22 May
-                                                            2025 at BARD, Kotbari, Cumilla.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-item">
-                                        <div class="timeline-body">
-                                            <div class="timeline-meta">
-                                                <div
-                                                    class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
-                                                    <span class="fw-bold">2022</span>
-                                                    <span>The IBN Sina Pharmaceutical Industry PLC</span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">Industrical Training</h2>
-
-                                                        <p class="card-text m-0">The training program was a part of my Undergraduate courses.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-
-            <!-- -------------- EDUCATION BOX ---------------- -->
-            <section class="section" id="education">
-                <div class="top-header">
-                    <h1>Education</h1>
-                </div>
-                <!-- Timeline 7 - Bootstrap Brain Component -->
-
-                <section class="bsb-timeline-7 py-3 py-md-5 py-xl-8">
-                    <div class="container">
-
-                        <div class="row justify-content-center">
-
-                            <div class="col-10 col-md-12 col-xl-10 col-xxl-9">
-
-                                <ul class="timeline">
-                                    <li class="timeline-item">
-                                        <div class="timeline-body">
-                                            <div class="timeline-meta">
-                                                <div
-                                                    class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
-                                                    <span class="fw-bold">2018 - 2023</span>
-                                                    <span>BUET</span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">Undergraduate</h2>
-                                                        <h6 class="card-subtitle text-secondary mb-3">Mechanical
-                                                            Engineering
-                                                        </h6>
-                                                        <p class="card-text m-0">I successfully completed my Bachelor of
-                                                            Science degree in Mechanical Engineering at Bangladesh
-                                                            University of Engineering and Technology (BUET).</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-item">
-                                        <div class="timeline-body">
-                                            <div class="timeline-meta">
-                                                <div
-                                                    class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
-                                                    <span class="fw-bold">2015 - 2017</span>
-                                                    <span>Rangpur Govt. College</span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">HSC</h2>
-                                                        <h6 class="card-subtitle text-secondary mb-3">Science
-                                                        </h6>
-                                                        <p class="card-text m-0">I obtained my Higher Secondary
-                                                            Certificate (HSC) in the Science group from Rangpur
-                                                            Government College with a GPA of 5.00.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-item">
-                                        <div class="timeline-body">
-                                            <div class="timeline-meta">
-                                                <div
-                                                    class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
-                                                    <span class="fw-bold">2010 - 2015</span>
-                                                    <span>Burimari Hashar Uddin High School</span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">SSC</h2>
-                                                        <h6 class="card-subtitle text-secondary mb-3">Science
-                                                        </h6>
-                                                        <p class="card-text m-0">I have successfully completed my
-                                                            Secondary School Certificate (SSC) in the Science stream
-                                                            from Burimari Hashar Uddin High School, achieving a GPA of
-                                                            5.00. I was awarded the Talent Pool Scholarship based on my
-                                                            SSC results and secured the first position in Lalmonirhat
-                                                            District.</p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">JSC</h2>
-
-                                                        <p class="card-text m-0">I have successfully completed my
-                                                            Junior School Certificate (JSC) in the Science stream
-                                                            from Burimari Hashar Uddin High School, achieving a GPA of
-                                                            5.00. I was awarded the Talent Pool Scholarship based on my
-                                                            JSC results and secured the first position in Patgram
-                                                            Upazila.</p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="timeline-item">
-                                        <div class="timeline-body">
-                                            <div class="timeline-meta">
-                                                <div
-                                                    class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
-                                                    <span class="fw-bold">2005 - 2009</span>
-                                                    <span>No. 1 Burimari Govt. Primary School</span>
-                                                </div>
-                                            </div>
-                                            <div class="timeline-content timeline-indicator">
-                                                <div class="card border-0 shadow">
-                                                    <div class="card-body p-xl-4">
-                                                        <h2 class="card-title mb-2">PSC</h2>
-                                                        <h6 class="card-subtitle text-secondary mb-3"> PECE(Primary
-                                                            Education Completion Examination)
-                                                        </h6>
-                                                        <p class="card-text m-0">I achieved First Class in the PSC
-                                                            examination, was awarded the Talent Pool Scholarship, and
-                                                            secured the first position in Burimari Union.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <!-- -------------- SKILL BOX ---------------- -->
-            <section class="section" id="skills">
-                <div class="top-header">
-                    <h1>Skills</h1>
-                </div>
-                <div class="row">
-                    <div class="skills-box">
-                        <div class="skills-header">
-                            <h3>Programming Language</h3>
-                        </div>
-                        <div class="skills-list">
-                            <span>Python</span>
-                            <span>MATLAB</span>
-                            <span>C</span>
-                            <span>Visual Basic for Excel</span>
-
-                        </div>
-                    </div>
-                    <div class="skills-box">
-                        <div class="skills-header">
-                            <h3>Microcontroler</h3>
-                        </div>
-                        <div class="skills-list">
-
-                            <span>Arduino</span>
-                            <span>Raspberry Pi</span>
-
-                        </div>
-                    </div>
-                    <div class="skills-box">
-                        <div class="skills-header">
-                            <h3>Circuit Modeling</h3>
-                        </div>
-                        <div class="skills-list">
-
-                            <span>Proteus</span>
-                            <span>TinkerCAD</span>
-                        </div>
-                    </div>
-                    <div class="skills-box">
-                        <div class="skills-header">
-                            <h3>CAD Modeling</h3>
-                        </div>
-                        <div class="skills-list">
-                            <span>SolidWorks</span>
-                            <span>AutoCAD</span>
-                            <span>SolidWorks Simulation</span>
-                            <span>SolidWorks Flow Simulation</span>
-                            <span>SolidWorks Motion Study</span>
-                            <span>SolidWorks Design Study</span>
-                            <span>Ansys Mechanical</span>
-                            <span>Ansys Fluent</span>
-                        </div>
-                    </div>
-
-                    <div class="skills-box">
-                        <div class="skills-header">
-                            <h3>Web Development</h3>
-                        </div>
-                        <div class="skills-list">
-                            <span>HTML5</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Django Framework</span>
-                        </div>
-                    </div>
-                    <div class="skills-box">
-                        <div class="skills-header">
-                            <h3>Microsoft Office and Others</h3>
-                        </div>
-                        <div class="skills-list">
-                            <span>Word</span>
-                            <span>Excel</span>
-                            <span>PowerPoint</span>
-                            <span>Google Workspace</span>
-                            <span>Tecplot 360</span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- -------------- PROJECT BOX ---------------- -->
-
-
-            <section class="section" id="projects">
-                <div class="top-header">
-                    <h1>Projects</h1>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="about-info">
-                            <h3>Smart Home</h3>
-                            <p style="text-align: justify;"> Build a project using arduino for home automation. Here we
-                                control the door system by
-                                measuring
-                                body temperature of incoming person, control fan and air cooler by measuring temperature
-                                and humidity, control
-                                water pump by measuring water level of water tank. There are also some security systems.
-                                If there occurs fire or gas
-                                leakage inside the home, an alarm is ringing and a notification is sent to owner of home
-                                via mobile network. We also
-                                develop an android app to control all of our home elements manually by Bluetooth
-                                communication.
-                            </p>
-                            <div class="about-btn">
-                                <button class="btn" onclick="window.location.href='https://drive.google.com/u/0/uc?id=1n3m6YRMxRJ_RQ3Dic00D5141AmftglFd&export=download';">Link</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="about-info">
-                            <h3 style="text-align: justify;">Shell and tube heat exchanger for marine application</h3>
-                            <p style="text-align: justify;">Design a shell and tube heat exchanger and model
-                                this. It can be used for marine engine cooling by sea water. Capacity, Size and
-                                efficiency is optimized by HTRI.
-                                Insulation is calculated by 3E Plus
-
-                            </p>
-                            <div class="about-btn">
-                                <button class="btn">Link</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                </br>
-                <div class="row">
-                    <div class="col">
-                        <div class="about-info">
-                            <h3>Result System</h3>
-                            <p>Build a project that can be used for grade sheet maker in school and college level
-                                institution in
-                                Bangladesh. Python is used here. Individual marksheet and full result sheet is created
-                                after run the project.
-                            </p>
-                            <div class="about-btn">
-                                <button class="btn">Link</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="about-info">
-                            <h3>Online Quiz App</h3>
-                            <p>Build a project using django framework, HTML5, CSS and JavaScript. Here student can
-                                register
-                                and participate MCQ exam. They can see their previous result also
-                            </p>
-                            <div class="about-btn">
-                                <button class="btn">Link</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </br>
-                <div class="row">
-                    <div class="col">
-
-                        <div class="about-info">
-                            <h3> Cuttly URL Shortener</h3>
-                            <p> This is simple program of url shortener using cuttly api and sqlite
-                            </p>
-                            <div class="about-btn">
-                                <button class="btn">Link</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-
-
-                    </div>
-                </div>
-            </section>
-            <!-- -------------- ACHIEVEMENTS BOX ---------------- -->
-            <section class="section" id="achievements">
-                <div class="top-header">
-                    <h1>Achievements</h1>
-                </div>
-                <div class="project-container">
-                    <div class="project-box">
-                        <i class="uil uil-award"></i>
-                        <h3>Undergraduate Admission</h3>
-                        <label>BUET: 395th (Group Ka)</label>
-                        <label>DU: 263th (Unit A)</label>
-                        <label>JU: 236th (Unit A)</label>
-                    </div>
-                    <div class="project-box">
-                        <i class="uil uil-trophy"></i>
-                        <h3>Young Scienteligent</h3>
-                        <label>1st Position in Rangpur Zone</label>
-                    </div>
-                    <div class="project-box">
-                        <i class="uil uil-trophy"></i>
-                        <h3>Udvash College Champion</h3>
-                        <label>8th Position in Rangpur Zone</label>
-                    </div>
-                    
-                    <div class="project-box">
-                        <i class="uil uil-award"></i>
-                        <h3>সৃজনশীল মেধা অন্বেষণ</h3>
-                        <label>Upazila Champion in 2013 and 2014</label>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-            <!-- -------------- CONTACT BOX ---------------- -->
-
-            <section class="section" id="contact">
-                <div class="top-header">
-                    <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind, contact me here</span>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="contact-info">
-                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                            <p><i class="uil uil-envelope"></i> Email: tanvirridoy864@gmail.com</p>
-                            <p><i class="uil uil-phone"></i> Mobile: +8801984-811676</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Name">
-                                <input type="text" class="input-field" placeholder="Email">
-                            </div>
-                            <div class="text-area">
-                                <textarea placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn">Send <i class="uil uil-message"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-
-        <!-- --------------- FOOTER --------------- -->
-        <footer>
-            <div class="top-footer">
-                <p>Farhan Tanvir</p>
+            <div class="info-item">
+              <span>Email:</span>
+              <span>tanvirridoy864@gmail.com</span>
             </div>
-            <div class="middle-footer">
-                <ul class="footer-menu">
+            <div class="info-item">
+              <span>Location:</span>
+              <span>Dhaka, Bangladesh</span>
+            </div>
+            <a
+              href="assets/farhan_tanvir_cv.pdf"
+              class="btn-cv"
+              download="farhan_tanvir_cv.pdf"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <li class="footer_menu_list">
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Assistant Engineer</h3>
+              <h4>Bakhrabad Gas Distribution Company Limited (BGDCL)</h4>
+              <div class="date">July 2024 - Present</div>
+              <p>
+                I am employed as an Assistant Engineer at Bakhrabad Gas
+                Distribution Company Limited (BGDCL).
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Institutional Foundation Training Course</h3>
+              <h4>BARD (Bangladesh Academy for Rural Development)</h4>
+              <div class="date">May 2025</div>
+              <p>
+                The Training Course was organized by the Bangladesh Academy for
+                Rural Development (BARD) and sponsored by BGDCL. The training
+                was held from 12 to 22 May 2025 at BARD, Kotbari, Cumilla.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Industrical Training</h3>
+              <h4>The IBN Sina Pharmaceutical Industry PLC</h4>
+              <div class="date">Oct 2022</div>
+              <p>
+                The training program was a part of my Undergraduate courses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="container">
+        <div class="section-title">
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>BSc in Mechanical Engineering</h3>
+              <h4>
+                Bangladesh University of Engineering and Technology (BUET)
+              </h4>
+              <div class="date">2018 - 2023</div>
+              <p>
+                I successfully completed my Bachelor of Science degree in
+                Mechanical Engineering at Bangladesh University of Engineering
+                and Technology (BUET).
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>HSC</h3>
+              <h4>Rangpur Government College</h4>
+              <div class="date">2015 - 2017</div>
+              <p>
+                I obtained my Higher Secondary Certificate (HSC) in the Science
+                group from Rangpur Government College with a GPA of 5.00.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>SSC</h3>
+              <h4>Burimari Hashar Uddin High School</h4>
+              <div class="date">2010 - 2015</div>
+              <p>
+                I have successfully completed my Secondary School Certificate
+                (SSC) in the Science stream from Burimari Hashar Uddin High
+                School, achieving a GPA of 5.00. I was awarded the Talent Pool
+                Scholarship based on my SSC results and secured the first
+                position in Lalmonirhat District.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>JSC</h3>
+              <h4>Burimari Hashar Uddin High School</h4>
+              <div class="date">2010 - 2015</div>
+              <p>
+                I have successfully completed my Junior School Certificate (JSC)
+                in the Science stream from Burimari Hashar Uddin High School,
+                achieving a GPA of 5.00. I was awarded the Talent Pool
+                Scholarship based on my JSC results and secured the first
+                position in Patgram Upazila.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>PECE(Primary Education Completion Examination)</h3>
+              <h4>No. 1 Burimari Govt. Primary School</h4>
+              <div class="date">2005 - 2009</div>
+              <p>
+                I achieved First Class in the PSC examination, was awarded the
+                Talent Pool Scholarship, and secured the first position in
+                Burimari Union.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/smarthome.jpg" alt="Smart Home" />
+            </div>
+            <div class="project-info">
+              <h3>Smart Home</h3>
+              <p>
+                Build a project using arduino for home automation. Here we
+                control the door system by measuring body temperature of
+                incoming person, control fan and air cooler by measuring
+                temperature and humidity, control water pump by measuring water
+                level of water tank. There are also some security systems. If
+                there occurs fire or gas leakage inside the home, an alarm is
+                ringing and a notification is sent to owner of home via mobile
+                network. We also develop an android app to control all of our
+                home elements manually by Bluetooth communication.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Arduino</span>
+                <span class="tag">Proteus</span>
+                <span class="tag">Kodular</span>
+              </div>
+              <div class="project-links">
+                <a href="#"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/HX.webp"
+                alt="Shell and tube heat exchanger"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Shell and tube heat exchanger for marine application</h3>
+              <p>
+                Design a shell and tube heat exchanger and model this. It can be
+                used for marine engine cooling by sea water. Capacity, Size and
+                efficiency is optimized by HTRI. Insulation is calculated by 3E
+                Plus
+              </p>
+              <div class="project-tags">
+                <span class="tag">SolidWorks</span>
+                <span class="tag">Ansys</span>
+                <span class="tag">HTRI</span>
+                <span class="tag">3E Plus</span>
+              </div>
+              <div class="project-links">
+                <a href="#"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/Result System.png"
+                alt="Weather Dashboard"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Result System</h3>
+              <p>
+                Build a project that can be used for grade sheet maker in school
+                and college level institution in Bangladesh. Python is used
+                here. Individual marksheet and full result sheet is created
+                after run the project.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a href="#"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/online quiz ss.png"
+                alt="Online Quiz App"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Online Quiz App</h3>
+              <p>
+                Build a project using django framework, HTML5, CSS and
+                JavaScript. Here student can register and participate MCQ exam.
+                They can see their previous result also
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">django</span>
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">BootStrap</span>
+              </div>
+              <div class="project-links">
+                <a href="#"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/cuttly_ss.png"
+                alt="Cuttly URL Shortener"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Cuttly URL Shortener</h3>
+              <p>
+                This is simple program of url shortener using cuttly api and
+                sqlite
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Cuttly API</span>
+                <span class="tag">SQLite</span>
+              </div>
+              <div class="project-links">
+                <a href="#"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/calculator ss.png"
+                alt="Simple calculator"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Simple Calculator</h3>
+              <p>This is simple program using python and tkinter package</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Tkinter</span>
+              </div>
+              <div class="project-links">
+                <a href="#"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/images/youtube downloader ss.png"
+                alt="Youtube Downloader"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Youtube Video Downloader</h3>
+              <p>This is simple program using python and tkinter package</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Tkinter</span>
+              </div>
+              <div class="project-links">
+                <a href="#"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML</span>
+                <span class="skill-level">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">CSS</span>
+                <span class="skill-level">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Bootstrap</span>
+                <span class="skill-level">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend & Database</h3>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Django</span>
+                <span class="skill-level">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">PHP</span>
+                <span class="skill-level">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">SQLite</span>
+                <span class="skill-level">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">MySQL</span>
+                <span class="skill-level">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Programming</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">C</span>
+                <span class="skill-level">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <span class="skill-level">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">MATLAB</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Visual Basic For Excel</span>
+                <span class="skill-level">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>CAD Modeling</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">SolidWorks</span>
+                <span class="skill-level">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">AutoCAD</span>
+                <span class="skill-level">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Ansys</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">SolidWorks Simulation</span>
+                <span class="skill-level">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="skill-category">
+            <h3>Other Skills</h3>
+            <div class="other-skill-items">
+              <span class="other-skill-item">Arduino</span>
+              <span class="other-skill-item">Raspberry Pi</span>
+              <span class="other-skill-item">Proteus </span>
+              <span class="other-skill-item">Microsoft Word</span>
+              <span class="other-skill-item">Microsoft Excel</span>
+              <span class="other-skill-item">Microsoft PowerPoint</span>
+              <span class="other-skill-item">Tecplot 360</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+      <div class="container">
+        <div class="section-title">
+          <h2>Achievements</h2>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>Undergraduate Admission</h3>
+            <p>
+              BUET: 395th (Group Ka) <br />
+              DU: 263th (Unit A) <br />
+              JU: 236th (Unit A)
+            </p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3>Young Scienteligent Winner</h3>
+            <p>1st Position in Rangpur Zone</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Udvash College Champion</h3>
+            <p>8th Position in Rangpur Zone</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>সৃজনশীল মেধা অন্বেষণ</h3>
+            <p>Upazila Champion in 2013 and 2014</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Me</h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>
+              If you have any questions or would like to work together, feel
+              free to contact me using the form or the information below.
+            </p>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Dhaka, Bangladesh</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>tanvirridoy864@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <p>+8801984811676</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/farhantanvir362"
+                class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/farhantanvirhridoy/"
+                class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/farhantanvirhridoy"
+                class="social-link"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@farhantanvir.buet17"
+                class="social-link"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <div class="footer-logo">
+              <i class="fas fa-code"></i>
+              Farhan Tanvir
+            </div>
+            <p>Experienced Python Developer</p>
+          </div>
+          <!-- <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
                         <a href="#home">Home</a>
-
-                    </li>
-                    <li class="footer_menu_list">
                         <a href="#about">About</a>
-
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#skills">Skills</a>
-
-                    </li>
-                    <li class="footer_menu_list">
                         <a href="#projects">Projects</a>
-
-                    </li>
-
-
-
-                </ul>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div> -->
+          <div>
+            <h4>Follow Me</h4>
+            <div class="social-links-footer">
+              <a
+                href="https://www.linkedin.com/in/farhantanvir362"
+                class="social-link-footer"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/farhantanvirhridoy/"
+                class="social-link-footer"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/farhantanvirhridoy"
+                class="social-link-footer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@farhantanvir.buet17"
+                class="social-link-footer"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
-            <div class="footer-social-icons">
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Farhan Tanvir. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-                <div class="icon" onclick="window.location.href='https://www.facebook.com/farhantanvirhridoy';"><i
-                        class="uil uil-facebook"></i></div>
-                <div class="icon" onclick="window.location.href='https://www.linkedin.com/in/farhantanvir362/';"><i
-                        class="uil uil-linkedin-alt"></i></div>
-                <a href="mailto:tanvirridoy864@gmail.com">
-                    <div class="icon"><i class="uil uil-envelope"></i></div>
-                </a>
-                <div class="icon" onclick="window.location.href='tel:+8801984811676';"><i class="uil uil-phone"></i>
-                </div>
-                <div class="icon" onclick="window.location.href='https://www.youtube.com/@farhantanvir.buet17';"><i
-                        class="uil uil-youtube"></i></div>
-                <div class="icon" onclick="window.location.href='https://github.com/farhantanvirhridoy/';"><i
-                        class="uil uil-github-alt"></i></div>
-
-            </div>
-            <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Farhan Tanvir</a> - All rights
-                    reserved
-                </p>
-            </div>
-        </footer>
-
-    </div>
-
-
-
-
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- ----- MAIN JS ----- -->
-    <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="assets/script.js"></script>
+  </body>
 </html>
