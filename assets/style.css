@@ -263,12 +263,14 @@ html {
   cursor: pointer;
   font-size: 1rem;
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.2));
 }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
   background-color: var(--secondary-color);
+  filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.6)) drop-shadow(0 0 24px rgba(99, 102, 241, 0.35));
 }
 
 .home-image {
@@ -430,6 +432,14 @@ section.visible {
   cursor: pointer;
   font-size: 1rem;
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.2));
+}
+
+.btn-cv:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  background-color: var(--secondary-color);
+  filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.6)) drop-shadow(0 0 24px rgba(99, 102, 241, 0.35));
 }
 
 /* Timeline for Experience and Education */
@@ -457,6 +467,12 @@ section.visible {
   position: relative;
   margin-bottom: 50px;
   width: 50%;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.2));
+  transition: var(--transition);
+}
+
+.timeline-item:hover {
+  filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.6)) drop-shadow(0 0 24px rgba(99, 102, 241, 0.3));
 }
 
 .timeline-item:nth-child(odd) {
@@ -539,11 +555,13 @@ section.visible {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.3)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.15));
 }
 
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.5)) drop-shadow(0 0 24px rgba(99, 102, 241, 0.25));
 }
 
 .project-image {
@@ -721,11 +739,13 @@ section.visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.3)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.15));
 }
 
 .achievement-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.5)) drop-shadow(0 0 24px rgba(99, 102, 241, 0.25));
 }
 
 .achievement-icon {
