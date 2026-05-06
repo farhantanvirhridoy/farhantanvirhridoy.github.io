@@ -432,6 +432,12 @@ section.visible {
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
+.btn-cv:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  background-color: var(--secondary-color);
+}
+
 /* Timeline for Experience and Education */
 .timeline {
   position: relative;
@@ -501,9 +507,41 @@ section.visible {
   transition: var(--transition);
 }
 
+#experience .timeline-content {
+  box-shadow:
+    0 0 0 2px rgba(99, 102, 241, 0.3),
+    0 0 15px rgba(99, 102, 241, 0.2),
+    0 0 30px rgba(236, 72, 153, 0.15),
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
 .timeline-content:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+#experience .timeline-content:hover {
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.4),
+    0 0 25px rgba(99, 102, 241, 0.3),
+    0 0 45px rgba(236, 72, 153, 0.2),
+    0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+#education .timeline-content {
+  box-shadow:
+    0 0 0 2px rgba(99, 102, 241, 0.3),
+    0 0 15px rgba(99, 102, 241, 0.2),
+    0 0 30px rgba(236, 72, 153, 0.15),
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+#education .timeline-content:hover {
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.4),
+    0 0 25px rgba(99, 102, 241, 0.3),
+    0 0 45px rgba(236, 72, 153, 0.2),
+    0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .timeline-content h3 {
