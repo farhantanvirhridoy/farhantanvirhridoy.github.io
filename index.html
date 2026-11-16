@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Farhan</title>
+    <title>Farhan Tanvir | Mechanical Engineer & Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Farhan Tanvir, a mechanical engineer and developer working across automation, web applications, data analysis, and machine learning."
+    />
+    <meta name="theme-color" content="#6366f1" />
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J405CD6NXT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-J405CD6NXT");
+    </script>
+    <meta property="og:title" content="Farhan Tanvir | Portfolio" />
+    <meta
+      property="og:description"
+      content="Mechanical engineer and developer focused on automation, web applications, data analysis, and machine learning."
+    />
+    <meta property="og:type" content="website" />
     <link
       rel="icon"
       type="image/png"
@@ -18,7 +37,7 @@
       href="assets/favicon/apple-touch-icon.png"
     />
     <meta name="apple-mobile-web-app-title" content="Portfolio" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -28,6 +47,7 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar">
       <div class="container">
@@ -35,7 +55,7 @@
           <i class="fas fa-code"></i>
           Portfolio
         </a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -45,21 +65,33 @@
           <li><a href="#achievements">Achievements</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
-            <div class="theme-toggle" id="theme-toggle">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch to dark theme"
+              aria-pressed="false"
+            >
               <div class="theme-icon" id="theme-icon">
-                <i class="fas fa-sun" id="theme-symbol"></i>
+                <i class="fas fa-sun" id="theme-symbol" aria-hidden="true"></i>
               </div>
-            </div>
+            </button>
           </li>
         </ul>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
 
+    <main id="main-content">
     <!-- Home Section -->
     <section id="home" class="home visible">
       <div class="shape shape-1"></div>
@@ -77,11 +109,58 @@
               Experienced Python Developer for Web Applications, Data Analysis,
               and Machine Learning.
             </p>
+            <p class="home-current">
+              <i class="fas fa-briefcase" aria-hidden="true"></i>
+              Currently Assistant Engineer at Pashchimanchal Gas Company Limited.
+            </p>
             <a href="#contact" class="btn">Get In Touch</a>
           </div>
           <div class="home-image">
-            <img src="assets/images/pic_enhanced.jpg" alt="Profile Picture" />
+            <img
+              src="assets/images/pic_enhanced.jpg"
+              alt="Portrait of Farhan Tanvir"
+              fetchpriority="high"
+            />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" class="featured-projects">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Selected work</p>
+          <h2>Featured Projects</h2>
+        </div>
+        <div class="featured-grid">
+          <article class="featured-card">
+            <img src="assets/images/smarthome.jpg" alt="Smart Home automation system" loading="lazy" decoding="async" />
+            <div class="featured-card-content">
+              <p class="eyebrow">Automation</p>
+              <h3>Smart Home</h3>
+              <p>Arduino automation with environmental monitoring, safety alerts, and an Android control app.</p>
+              <a href="https://github.com/farhantanvirhridoy/Arduino-Smart-Home" target="_blank" rel="noreferrer">View project <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="featured-card">
+            <img src="assets/images/HX.webp" alt="Shell-and-tube heat exchanger design" loading="lazy" decoding="async" />
+            <div class="featured-card-content">
+              <p class="eyebrow">Mechanical Design</p>
+              <h3>Marine Heat Exchanger</h3>
+              <p>Optimized shell-and-tube heat-exchanger design for marine engine cooling applications.</p>
+              <a href="#projects">Explore project <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="featured-card">
+            <img src="assets/images/online quiz ss.png" alt="Online Quiz App interface" loading="lazy" decoding="async" />
+            <div class="featured-card-content">
+              <p class="eyebrow">Web Application</p>
+              <h3>Online Quiz App</h3>
+              <p>A Django assessment platform for registration, MCQ examinations, and result review.</p>
+              <a href="#projects">Explore project <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -90,38 +169,47 @@
     <section id="about">
       <div class="container">
         <div class="section-title">
+          <p class="eyebrow">Profile</p>
           <h2>About Me</h2>
         </div>
         <div class="about-content">
           <div class="about-image">
-            <img src="assets/images/IMG-20250619-WA0045.jpg" alt="About Me" />
+            <img src="assets/images/IMG-20250619-WA0045.jpg" alt="Farhan Tanvir" loading="lazy" />
           </div>
           <div class="about-text">
-            <h3>My introduction</h3>
-            <p style="text-align: justify;">
-              I am a passionate and versatile Mechanical Engineering graduate at
-              BUET, with a strong foundation in programming, CAD modeling, and
-              simulation tools. I combine my technical expertise with hands-on
-              experience in automation, web development, and
-              microcontroller-based projects. I have a keen interest in fields
-              like heat transfer, fluid mechanics, and computational fluid
-              dynamics, and I actively apply my knowledge through innovative
-              projects and research. With a drive for learning and a talent for
-              problem-solving, I continue to explore the intersection of
-              engineering and technology.
+            <h3>Engineering grounded. Technology driven.</h3>
+            <p class="about-intro">
+              I am a BUET Mechanical Engineering graduate and Assistant
+              Engineer who combines engineering fundamentals with practical
+              experience in automation, CAD modelling, simulation, and software
+              development. I enjoy turning complex technical challenges into
+              reliable, useful solutions.
             </p>
 
-            <div class="info-item">
-              <span>Name:</span>
-              <span>Farhan Tanvir</span>
+            <div class="about-highlights">
+              <div class="about-highlight">
+                <i class="fas fa-gears" aria-hidden="true"></i>
+                <div><strong>Engineering</strong><span>Thermal systems, CFD, and design</span></div>
+              </div>
+              <div class="about-highlight">
+                <i class="fas fa-microchip" aria-hidden="true"></i>
+                <div><strong>Automation</strong><span>Microcontrollers and connected systems</span></div>
+              </div>
+              <div class="about-highlight">
+                <i class="fas fa-code" aria-hidden="true"></i>
+                <div><strong>Development</strong><span>Python applications and web solutions</span></div>
+              </div>
             </div>
-            <div class="info-item">
-              <span>Email:</span>
-              <span>tanvirridoy864@gmail.com</span>
-            </div>
-            <div class="info-item">
-              <span>Location:</span>
-              <span>Dhaka, Bangladesh</span>
+
+            <div class="about-details">
+              <div class="info-item">
+                <i class="fas fa-location-dot" aria-hidden="true"></i>
+                <div><span>Based in</span><strong>Dhaka, Bangladesh</strong></div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <div><span>Email</span><a href="mailto:tanvirridoy864@gmail.com">tanvirridoy864@gmail.com</a></div>
+              </div>
             </div>
             <a
               href="assets/farhan_tanvir_cv.pdf"
@@ -178,7 +266,7 @@
           </div>
           <div class="timeline-item">
             <div class="timeline-content">
-              <h3>Industrical Training</h3>
+              <h3>Industrial Training</h3>
               <h4>The IBN Sina Pharmaceutical Industry PLC</h4>
               <div class="date">Oct 2022</div>
               <p>
@@ -275,20 +363,15 @@
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-image">
-              <img src="assets/images/smarthome.jpg" alt="Smart Home" />
+              <img src="assets/images/smarthome.jpg" alt="Smart Home" loading="lazy" decoding="async" />
             </div>
             <div class="project-info">
               <h3>Smart Home</h3>
               <p>
-                Build a project using arduino for home automation. Here we
-                control the door system by measuring body temperature of
-                incoming person, control fan and air cooler by measuring
-                temperature and humidity, control water pump by measuring water
-                level of water tank. There are also some security systems. If
-                there occurs fire or gas leakage inside the home, an alarm is
-                ringing and a notification is sent to owner of home via mobile
-                network. We also develop an android app to control all of our
-                home elements manually by Bluetooth communication.
+                An Arduino-based home-automation system with environmental
+                monitoring, water-level control, intrusion protection, and fire
+                and gas-leak alerts. A companion Android app provides manual
+                Bluetooth control of connected devices.
               </p>
               <div class="project-tags">
                 <span class="tag">Arduino</span>
@@ -296,11 +379,11 @@
                 <span class="tag">Kodular</span>
               </div>
               <div class="project-links">
-                <a href="https://youtu.be/wdjhODegNeE"
+                <a href="https://youtu.be/wdjhODegNeE" target="_blank" rel="noreferrer"
                   ><i class="fas fa-external-link-alt"></i> Live Demo</a
                 >
                 <a
-                  href="https://github.com/farhantanvirhridoy/Arduino-Smart-Home"
+                  href="https://github.com/farhantanvirhridoy/Arduino-Smart-Home" target="_blank" rel="noreferrer"
                   ><i class="fab fa-github"></i> GitHub</a
                 >
               </div>
@@ -311,15 +394,16 @@
               <img
                 src="assets/images/HX.webp"
                 alt="Shell and tube heat exchanger"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="project-info">
               <h3>Shell and tube heat exchanger for marine application</h3>
               <p>
-                Design a shell and tube heat exchanger and model this. It can be
-                used for marine engine cooling by sea water. Capacity, Size and
-                efficiency is optimized by HTRI. Insulation is calculated by 3E
-                Plus
+                Designed and modelled a shell-and-tube heat exchanger for marine
+                engine cooling. Capacity, dimensions, and efficiency were
+                optimized in HTRI, with insulation calculated using 3E Plus.
               </p>
               <div class="project-tags">
                 <span class="tag">SolidWorks</span>
@@ -327,39 +411,32 @@
                 <span class="tag">HTRI</span>
                 <span class="tag">3E Plus</span>
               </div>
-              <div class="project-links">
-                <a href="#"
-                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                >
-                <a href="#"><i class="fab fa-github"></i> GitHub</a>
-              </div>
+              <p class="project-availability">Project documentation available on request.</p>
             </div>
           </div>
           <div class="project-card">
             <div class="project-image">
               <img
                 src="assets/images/Result System.png"
-                alt="Weather Dashboard"
+                alt="Result System application"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="project-info">
               <h3>Result System</h3>
               <p>
-                Build a project that can be used for grade sheet maker in school
-                and college level institution in Bangladesh. Python is used
-                here. Individual marksheet and full result sheet is created
-                after run the project.
+                A Python application for preparing school and college grade
+                sheets. It generates individual mark sheets and consolidated
+                result reports from entered marks.
               </p>
               <div class="project-tags">
                 <span class="tag">C</span>
                 <span class="tag">Python</span>
               </div>
               <div class="project-links">
-                <a href="#"
-                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                >
                 <a
-                  href="https://github.com/farhantanvirhridoy/Result-System-Python"
+                  href="https://github.com/farhantanvirhridoy/Result-System-Python" target="_blank" rel="noreferrer"
                   ><i class="fab fa-github"></i> GitHub</a
                 >
               </div>
@@ -370,29 +447,25 @@
               <img
                 src="assets/images/online quiz ss.png"
                 alt="Online Quiz App"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="project-info">
               <h3>Online Quiz App</h3>
               <p>
-                Build a project using django framework, HTML5, CSS and
-                JavaScript. Here student can register and participate MCQ exam.
-                They can see their previous result also
+                A Django-based assessment platform where students can register,
+                take MCQ examinations, and review their past results.
               </p>
               <div class="project-tags">
                 <span class="tag">Python</span>
-                <span class="tag">django</span>
+                <span class="tag">Django</span>
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
-                <span class="tag">BootStrap</span>
+                <span class="tag">Bootstrap</span>
               </div>
-              <div class="project-links">
-                <a href="#"
-                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                >
-                <a href="#"><i class="fab fa-github"></i> GitHub</a>
-              </div>
+              <p class="project-availability">Demo and source are not public.</p>
             </div>
           </div>
           <div class="project-card">
@@ -400,28 +473,21 @@
               <img
                 src="assets/images/cuttly_ss.png"
                 alt="Cuttly URL Shortener"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="project-info">
               <h3>Cuttly URL Shortener</h3>
               <p>
-                This is simple program of url shortener using cuttly api and
-                sqlite
+                A simple URL shortener built with the Cuttly API and SQLite.
               </p>
               <div class="project-tags">
                 <span class="tag">Python</span>
                 <span class="tag">Cuttly API</span>
                 <span class="tag">SQLite</span>
               </div>
-              <div class="project-links">
-                <a href="#"
-                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                >
-                <a
-                  href="https://github.com/farhantanvirhridoy/Result-System-Python"
-                  ><i class="fab fa-github"></i> GitHub</a
-                >
-              </div>
+              <p class="project-availability">Source is not public.</p>
             </div>
           </div>
           <div class="project-card">
@@ -429,21 +495,20 @@
               <img
                 src="assets/images/calculator ss.png"
                 alt="Simple calculator"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="project-info">
               <h3>Simple Calculator</h3>
-              <p>This is simple program using python and tkinter package</p>
+              <p>A desktop calculator application built with Python and Tkinter.</p>
               <div class="project-tags">
                 <span class="tag">Python</span>
                 <span class="tag">Tkinter</span>
               </div>
               <div class="project-links">
-                <a href="#"
-                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                >
                 <a
-                  href="https://github.com/farhantanvirhridoy/Simple-calculator"
+                  href="https://github.com/farhantanvirhridoy/Simple-calculator" target="_blank" rel="noreferrer"
                   ><i class="fab fa-github"></i> GitHub</a
                 >
               </div>
@@ -453,22 +518,21 @@
             <div class="project-image">
               <img
                 src="assets/images/youtube downloader ss.png"
-                alt="Youtube Downloader"
+                alt="YouTube Downloader"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="project-info">
-              <h3>Youtube Video Downloader</h3>
-              <p>This is simple program using python and tkinter package</p>
+              <h3>YouTube Video Downloader</h3>
+              <p>A simple desktop application built with Python and Tkinter.</p>
               <div class="project-tags">
                 <span class="tag">Python</span>
                 <span class="tag">Tkinter</span>
               </div>
               <div class="project-links">
-                <a href="#"
-                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
-                >
                 <a
-                  href="https://github.com/farhantanvirhridoy/Youtube-video-downloader"
+                  href="https://github.com/farhantanvirhridoy/Youtube-video-downloader" target="_blank" rel="noreferrer"
                   ><i class="fab fa-github"></i> GitHub</a
                 >
               </div>
@@ -710,7 +774,10 @@
         </div>
         <div class="contact-content">
           <div class="contact-form">
-            <form id="contact-form">
+            <form id="contact-form" action="https://formsubmit.co/tanvirridoy864@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New portfolio enquiry" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required />
@@ -733,6 +800,7 @@
                 ></textarea>
               </div>
               <button type="submit" class="btn">Send Message</button>
+              <p class="form-status">Your message is delivered securely. You will receive a confirmation after the form is activated.</p>
             </form>
           </div>
           <div class="contact-info">
@@ -756,7 +824,7 @@
               </div>
               <div>
                 <h4>Email</h4>
-                <p>tanvirridoy864@gmail.com</p>
+                <p><a href="mailto:tanvirridoy864@gmail.com">tanvirridoy864@gmail.com</a></p>
               </div>
             </div>
             <div class="contact-item">
@@ -765,28 +833,28 @@
               </div>
               <div>
                 <h4>Phone</h4>
-                <p>+8801984811676</p>
+                <p><a href="tel:+8801984811676">+880 1984-811676</a></p>
               </div>
             </div>
             <div class="social-links">
               <a
                 href="https://www.linkedin.com/in/farhantanvir362"
-                class="social-link"
+                class="social-link" aria-label="LinkedIn profile" target="_blank" rel="noreferrer"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
               <a
                 href="https://github.com/farhantanvirhridoy/"
-                class="social-link"
+                class="social-link" aria-label="GitHub profile" target="_blank" rel="noreferrer"
                 ><i class="fab fa-github"></i
               ></a>
               <a
                 href="https://www.facebook.com/farhantanvirhridoy"
-                class="social-link"
+                class="social-link" aria-label="Facebook profile" target="_blank" rel="noreferrer"
                 ><i class="fab fa-facebook"></i
               ></a>
               <a
                 href="https://www.youtube.com/@farhantanvir.buet17"
-                class="social-link"
+                class="social-link" aria-label="YouTube channel" target="_blank" rel="noreferrer"
                 ><i class="fab fa-youtube"></i
               ></a>
             </div>
@@ -794,6 +862,8 @@
         </div>
       </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -820,34 +890,33 @@
             <div class="social-links-footer">
               <a
                 href="https://www.linkedin.com/in/farhantanvir362"
-                class="social-link-footer"
+                class="social-link-footer" aria-label="LinkedIn profile" target="_blank" rel="noreferrer"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
               <a
                 href="https://github.com/farhantanvirhridoy/"
-                class="social-link-footer"
+                class="social-link-footer" aria-label="GitHub profile" target="_blank" rel="noreferrer"
                 ><i class="fab fa-github"></i
               ></a>
               <a
                 href="https://www.facebook.com/farhantanvirhridoy"
-                class="social-link-footer"
+                class="social-link-footer" aria-label="Facebook profile" target="_blank" rel="noreferrer"
                 ><i class="fab fa-facebook"></i
               ></a>
               <a
                 href="https://www.youtube.com/@farhantanvir.buet17"
-                class="social-link-footer"
+                class="social-link-footer" aria-label="YouTube channel" target="_blank" rel="noreferrer"
                 ><i class="fab fa-youtube"></i
               ></a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 Farhan Tanvir. All Rights Reserved.</p>
+          <p>&copy; <span id="copyright-year">2026</span> Farhan Tanvir. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
 
     <script src="assets/script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>

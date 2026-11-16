@@ -45,8 +45,10 @@ function typeText() {
   }
 }
 
-// Start typing animation
-typeText();
+// Start typing animation unless the visitor has asked for reduced motion.
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  typeText();
+}
 
 // Theme Toggle
 const themeToggle = document.getElementById("theme-toggle");
@@ -71,8 +73,12 @@ themeToggle.addEventListener("click", () => {
 function updateThemeIcon(theme) {
   if (theme === "dark") {
     themeSymbol.className = "fas fa-moon";
+    themeToggle.setAttribute("aria-label", "Switch to light theme");
+    themeToggle.setAttribute("aria-pressed", "true");
   } else {
     themeSymbol.className = "fas fa-sun";
+    themeToggle.setAttribute("aria-label", "Switch to dark theme");
+    themeToggle.setAttribute("aria-pressed", "false");
   }
 }
 
@@ -80,12 +86,14 @@ function updateThemeIcon(theme) {
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+function toggleMenu() {
+  const isOpen = navLinks.classList.toggle("active");
+  hamburger.setAttribute("aria-expanded", String(isOpen));
+  hamburger.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
 
   // Animate hamburger lines
   const spans = hamburger.querySelectorAll("span");
-  if (navLinks.classList.contains("active")) {
+  if (isOpen) {
     spans[0].style.transform = "rotate(45deg) translateY(8px)";
     spans[1].style.opacity = "0";
     spans[2].style.transform = "rotate(-45deg) translateY(-8px)";
@@ -94,12 +102,16 @@ hamburger.addEventListener("click", () => {
     spans[1].style.opacity = "1";
     spans[2].style.transform = "rotate(0) translateY(0)";
   }
-});
+}
+
+hamburger.addEventListener("click", toggleMenu);
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
+    hamburger.setAttribute("aria-label", "Open navigation menu");
 
     // Reset hamburger animation
     const spans = hamburger.querySelectorAll("span");
@@ -145,46 +157,7 @@ function animateSkillBars() {
   });
 }
 
-// Form submission
-const contactForm = document.getElementById("contact-form");
-
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  // Get form values
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const subject = document.getElementById("subject").value;
-  const message = document.getElementById("message").value;
- 
-  // Here you would normally send the form data to a server
-
-
-  // For this example, we'll just show a success message
-
-  // Create success message
-  const successMessage = document.createElement("div");
-  successMessage.style.padding = "15px";
-  successMessage.style.marginTop = "20px";
-  successMessage.style.backgroundColor = "#10b981";
-  successMessage.style.color = "white";
-  successMessage.style.borderRadius = "8px";
-  successMessage.style.textAlign = "center";
-  successMessage.style.fontWeight = "500";
-  successMessage.textContent =
-    "Thank you for your message! I will get back to you soon.";
-
-  // Add success message after the form
-  contactForm.appendChild(successMessage);
-
-  // Reset form
-  contactForm.reset();
-
-  // Remove success message after 5 seconds
-  setTimeout(() => {
-    successMessage.remove();
-  }, 5000);
-});
+document.getElementById("copyright-year").textContent = new Date().getFullYear();
 
 // Navbar scroll effect
 window.addEventListener("scroll", () => {
